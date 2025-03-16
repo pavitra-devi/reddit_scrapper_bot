@@ -125,8 +125,8 @@ def index():
         print("searching for these:",subreddit, keyword)
         posts = fetch_reddit_posts(subreddit, keyword)
         print(posts)
-        # answer = summarize_posts_content(posts)
-        # print(answer)
+        answer = summarize_posts_content(posts)
+        print(answer)
         send_message_telegram(chat_id, posts)
         return Response('ok', status=200)
     else:
